@@ -1,0 +1,28 @@
+@import "bootstrap/scss/bootstrap";
+
+#upload-image-dropzone-wrapper {
+  background-color: #eee;
+  border-radius: 4px;
+  border: 2px dashed #ccc;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+
+  &.drag-accept {
+    background-color: #c6eccf;
+    border-color: #a6caaf;
+    color: #0e8f2c;
+  }
+
+  &.drag-reject {
+    background-color: #e7c8cb;
+    border-color: #f6d4d7;
+    color: #441419;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}

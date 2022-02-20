@@ -1,0 +1,343 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.pageWrapper {
+  margin: 0.5em;
+}
+
+#spinner {
+  width: 100%;
+  text-align: center;
+  margin-top: 5em;
+}
+
+.pageWrapper img:hover {
+  cursor: pointer;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.nav-container {
+  margin: 0em 1em;
+}
+
+.album-review-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.side-grid-container {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.side-grid-container p {
+  margin-left: 1.2em;
+}
+
+.selected-images {
+  height: 80px;
+}
+
+.side-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 80px);
+  justify-content: center;
+}
+
+.album-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+/* 
+.album-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;;
+}
+ */
+.album-grid {
+  display: flex;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 150px);
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.album-image {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 10px;
+}
+
+.album-actions button {
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.album-actions button:hover {
+  background-color: rgb(236, 225, 225);
+}
+
+#basic-nav-dropdown a {
+  color: black;
+}
+
+.album a {
+  color: black;
+}
+
+.album-actions button:disabled {
+  color: rgb(171, 171, 171);
+}
+
+.submit-review button {
+  display: none;
+}
+
+.submit-review-mobile {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-review-mobile button {
+  display: block;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 6px;
+  height: 2.4em;
+  padding: 0em 0.8em;
+  box-shadow: 1px 2px 2px rgb(205, 205, 205);
+  margin-bottom: 3em;
+}
+
+.submit-review button:disabled,
+.submit-review-mobile button:disabled {
+  background-color: rgb(233, 233, 233);
+  box-shadow: none;
+}
+
+.custom-checkbox {
+  cursor: pointer;
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.639);
+  border: 1px solid #cacece;
+  padding: 9px;
+  display: inline-block;
+  position: relative;
+  margin-top: 0.5em;
+  height: 15px;
+  width: 15px;
+}
+
+.custom-checkbox:checked:after {
+  content: "\271A";
+  font-size: 17px;
+  position: absolute;
+  top: -5px;
+  left: 2px;
+  color: black;
+}
+
+.custom-checkbox:disabled {
+  background-color: rgb(225, 225, 225);
+}
+
+.new-album-title input {
+  border-radius: 8px;
+  padding: 0.2em 0.3em;
+  margin: 0.4em 0.2em 1em 0em;
+}
+
+.new-album-title button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.6em;
+}
+
+.album-item {
+  margin-top: 1.2em;
+}
+
+.album-item p {
+  font-size: x-small;
+}
+
+.discarded {
+  opacity: 0.5;
+}
+
+.card-title,
+.card-text {
+  color: black;
+  text-decoration: none !important;
+}
+
+.card-title,
+.card-text {
+  color: black;
+  text-decoration: none !important;
+}
+
+.submit-review {
+  margin-top: 2em;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-right: 4em;
+}
+
+.image-grid .card-body {
+  padding-top: 0;
+}
+
+.card-body:hover {
+  padding-top: 0;
+  background-color: rgb(106, 128, 141);
+}
+
+#discard:hover,
+#keep:hover {
+  cursor: pointer;
+}
+
+.discarded-image {
+  opacity: 0.2;
+}
+
+.discarded-images-list {
+  opacity: 0.7;
+}
+
+.image-and-actions-wrapper {
+  height: 100%;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.close-dropzone-button button {
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+/* manually overriding, since option prop on wrapper did not do the work */
+.SRLCaptionContainer {
+  display: none !important;
+}
+
+@media (min-width: 374px) {
+  .pageWrapper {
+    margin: 1em 5em;
+  }
+
+  .album-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 3em;;
+  }
+
+  .album-image,
+  .reviewed-album-image-grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, 350px);
+  }
+
+  .reviewed-album-image-grid {
+    justify-content: flex-start;
+  }
+
+  .album-actions {
+    font-size: 1em;
+  }
+
+  .album-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 250px);
+    margin-top: 2em;
+    justify-content: space-around;
+  }
+
+  .selected-images {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: 100px;
+  }
+
+  .side-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .side-grid-container {
+    margin-top: 0em;
+    margin-bottom: 3em;
+  }
+
+  .side-grid-container p {
+    margin-left: 0;
+  }
+
+  .delete {
+    font-size: 33px;
+  }
+
+  .share {
+    margin-top: 3px;
+    font-size: 31px;
+  }
+}
+
+@media (min-width: 730px) {
+  .nav-container {
+    margin: 0em 5em;
+  }
+
+  .album-review-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5em;
+  }
+
+  .submit-review button {
+    display: block;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 6px;
+    height: 2.4em;
+    padding: 0em 0.8em;
+    box-shadow: 1px 2px 2px rgb(205, 205, 205);
+  }
+
+  .submit-review button:disabled {
+    background-color: rgb(233, 233, 233);
+    box-shadow: none;
+  }
+
+  .submit-review-mobile {
+    display: none;
+  }
+}
